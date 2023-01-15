@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "3ce1b144-0d60-463a-8d08-c9fd4d719d91",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "943807"
+	},
+	"item": [
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|i2h72rZhNLBSukRSDF4uQhlDiQYIsHdN7QTTFKwS",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customerId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "totalPrice",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "products[0][productId]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "products[0][quantity]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "products[1][productId]",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "products[1][quantity]",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/order",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|i2h72rZhNLBSukRSDF4uQhlDiQYIsHdN7QTTFKwS",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost/api/order",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|i2h72rZhNLBSukRSDF4uQhlDiQYIsHdN7QTTFKwS",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/order/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "customerId",
+							"value": "Deneme",
+							"type": "text"
+						},
+						{
+							"key": "totalPrice",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "products[0][productId]",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "products[0][quantity]",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/order",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

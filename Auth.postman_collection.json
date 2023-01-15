@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "ba3aa0de-61b0-4831-8dbe-520b608d33a3",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "943807"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Ahmet ",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "DALDEMİR",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ahmetdaldemir@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "198711ad",
+							"type": "text"
+						},
+						{
+							"key": "userName",
+							"value": "ahmet1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userName",
+							"value": "ahmet1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "198711ad",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
